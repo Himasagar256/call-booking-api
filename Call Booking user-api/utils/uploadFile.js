@@ -1,7 +1,7 @@
 const multer  = require('multer');
 const {GridFsStorage} = require('multer-gridfs-storage');
 const storage = new GridFsStorage({
-    url: "mongodb://localhost:27017",
+    url: "mongodb://localhost:27017/mydb",
     file: (req,file) => {
         if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')  {
             let filename = 'file_'+Date.now()
